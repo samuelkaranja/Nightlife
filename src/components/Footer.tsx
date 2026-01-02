@@ -33,7 +33,8 @@ const Footer: React.FC = () => {
           {/* Right Section */}
           <div className="flex items-center gap-6">
             <a
-              href="#"
+              href="https://www.instagram.com/belawinski_cocktailbar/"
+              target="_blank"
               aria-label="Instagram"
               className="p-3 rounded-full bg-white/10 hover:bg-amber-600 transition"
             >
