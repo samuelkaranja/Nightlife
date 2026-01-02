@@ -4,4 +4,5 @@ export { default as Intro } from "../components/Intro";
 export { default as Cocktails } from "../components/Cocktails";
 export { default as CocktailCard } from "../components/CocktailCard";
 export { default as ExperienceVibe } from "../components/ExperienceVibe";
+export { default as GalleryImage } from "../components/GalleryImage";
 export { default as Footer } from "../components/Footer";
