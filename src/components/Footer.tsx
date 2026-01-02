@@ -21,7 +21,7 @@ const Footer: React.FC = () => {
 
             {/* Location */}
             <p className="mt-4 text-sm text-gray-400">
-              Coop-Joint near Cooperative Bank
+              Location: Coop-Joint near Cooperative Bank
             </p>
 
             {/* Opening Hours */}

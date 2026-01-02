@@ -6,7 +6,7 @@ const Hero: React.FC = () => {
     <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-24">
       {/* Hero Container */}
       <div
-        className="relative w-full max-w-7xl h-[50vh] md:h-[60vh] rounded-2xl overflow-hidden bg-center bg-cover flex items-center justify-center"
+        className="relative w-full max-w-7xl h-[45vh] md:h-[60vh] rounded-2xl overflow-hidden bg-center bg-cover flex items-center justify-center"
         style={{
           backgroundImage: `url(${Counter})`,
         }}

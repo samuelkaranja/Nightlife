@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const navLinks = [
   { name: "Menu", href: "#menu" },
@@ -16,9 +17,9 @@ const Navbar: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 border-b border-dotted border-gray-50">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <div className="text-2xl font-bold text-white tracking-wide">
+          <Link to="/" className="text-2xl font-bold text-white tracking-wide">
             Belawinski<span className="text-amber-500"> Bar</span>
-          </div>
+          </Link>
 
           {/* Desktop Links */}
           <div className="hidden md:flex items-center space-x-8">
