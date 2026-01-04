@@ -4,9 +4,9 @@ const Events: React.FC = () => {
   return (
     <>
       {/* Page Header */}
-      <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-12">
+      <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-5">
         <div className="w-full max-w-7xl text-center py-10 lg:py-18">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-white">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
             Happening at Belawinski
           </h1>
 

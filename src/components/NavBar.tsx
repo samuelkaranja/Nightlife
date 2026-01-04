@@ -10,6 +10,7 @@ type NavLinkItem = {
 };
 
 const navLinks: NavLinkItem[] = [
+  { name: "Home", href: "/", type: "route" },
   { name: "Menu", href: "/menu", type: "route" },
   { name: "Gallery", href: "/gallery", type: "route" },
   { name: "Events", href: "/events", type: "route" },
@@ -25,16 +26,14 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 text-2xl font-bold text-white tracking-wide"
+            className="flex items-center gap-3 text-2xl font-bold text-amber-500 tracking-wide"
           >
             <img
               src={Logo}
               alt="Belawinski Bar Logo"
               className="h-9 w-9 object-contain"
             />
-            <span>
-              Belawinski<span className="text-amber-500"> Cocktail Bar</span>
-            </span>
+            <span>Belawinski Cocktail Bar</span>
           </Link>
 
           {/* Desktop Links */}

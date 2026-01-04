@@ -1,30 +1,65 @@
 import { GalleryImage } from "../components";
-import Bar from "../assets/bar.jpg";
-import Cocktail from "../assets/cocktails.jpg";
-import Counter from "../assets/counter.jpg";
-import Glass from "../assets/glass.jpg";
-import Drink from "../assets/drinks.jpg";
+import Crowd from "../assets/Belawinski/crowd.jpg";
+import Mix from "../assets/Belawinski/mixologist.jpg";
+import Seat from "../assets/Belawinski/seat1.jpeg";
+import Event from "../assets/Belawinski/halloween1.jpeg";
+import Event2 from "../assets/Belawinski/halloween2.jpeg";
+import Event3 from "../assets/Belawinski/halloween3.jpeg";
+import Game from "../assets/Belawinski/game1.jpeg";
+import Game1 from "../assets/Belawinski/game2.jpeg";
+import Game2 from "../assets/Belawinski/game3.jpeg";
+import Game3 from "../assets/Belawinski/game4.jpeg";
+import Game4 from "../assets/Belawinski/game5.jpeg";
+import Cocktail from "../assets/Belawinski/cocktail6.jpg";
 
 const galleryImages = [
   {
     id: 1,
-    src: Bar,
+    src: Crowd,
   },
   {
     id: 2,
-    src: Cocktail,
+    src: Mix,
   },
   {
     id: 3,
-    src: Counter,
+    src: Seat,
   },
   {
     id: 4,
-    src: Glass,
+    src: Event,
   },
   {
     id: 5,
-    src: Drink,
+    src: Event2,
+  },
+  {
+    id: 6,
+    src: Event3,
+  },
+  {
+    id: 7,
+    src: Game,
+  },
+  {
+    id: 8,
+    src: Game1,
+  },
+  {
+    id: 9,
+    src: Game2,
+  },
+  {
+    id: 10,
+    src: Game3,
+  },
+  {
+    id: 11,
+    src: Game4,
+  },
+  {
+    id: 12,
+    src: Cocktail,
   },
 ];
 

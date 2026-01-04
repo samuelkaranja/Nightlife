@@ -1,4 +1,5 @@
 import { Instagram, Music2, MessageCircle } from "lucide-react";
+import Logo from "../assets/Belawinski/Logo.jpg";
 // Music2 used as a TikTok-style icon fallback
 
 const Footer: React.FC = () => {
@@ -11,11 +12,11 @@ const Footer: React.FC = () => {
             {/* Logo / Name */}
             <div className="flex items-center justify-center md:justify-start gap-3">
               {/* Replace with your logo image if available */}
-              <div className="w-10 h-10 rounded-full bg-amber-600 flex items-center justify-center text-black font-bold">
-                B
+              <div className="w-10 h-10 rounded-full flex items-center justify-center text-black font-bold">
+                <img src={Logo} alt="Logo" />
               </div>
-              <h3 className="text-2xl font-extrabold text-white">
-                Belawinski Bar
+              <h3 className="text-2xl font-extrabold text-amber-500">
+                Belawinski Cocktail Bar
               </h3>
             </div>
 
