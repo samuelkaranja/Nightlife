@@ -7,15 +7,15 @@ const Intro: React.FC = () => {
     <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-10 lg:py-15 mt-15">
       <div className="w-full max-w-7xl text-center">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">
+        <h2 className="text-5xl sm:text-5xl md:text-6xl font-extrabold text-white">
           Welcome to <span className="text-amber-600">Belawinski</span>
         </h2>
 
         {/* Subtitle */}
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-white leading-relaxed">
           Discover a world where sophisticated mixology meets vibrant nightlife.
-          Belawinski Bar offers an exclusive atmosphere, premium cocktails, and
-          an unforgettable experience. Join us for an evening of elegance and
+          Belawinski offers an exclusive atmosphere, premium cocktails, and an
+          unforgettable experience. Join us for an evening of elegance and
           excitement.
         </p>
 
