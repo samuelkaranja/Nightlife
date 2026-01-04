@@ -9,7 +9,7 @@ type NavLinkItem = {
 };
 
 const navLinks: NavLinkItem[] = [
-  { name: "Menu", href: "#menu", type: "anchor" },
+  { name: "Menu", href: "/menu", type: "route" },
   { name: "Gallery", href: "/gallery", type: "route" },
   { name: "Events", href: "/events", type: "route" },
   { name: "Contact Us", href: "#contact", type: "anchor" },

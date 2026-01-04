@@ -7,4 +7,6 @@ export { default as ExperienceVibe } from "../components/ExperienceVibe";
 export { default as GalleryImage } from "../components/GalleryImage";
 export { default as EventCard } from "../components/EventCard";
 export { default as EventsList } from "../components/EventsList";
+export { default as DrinkCard } from "../components/DrinkCard";
+export { default as DrinkSection } from "../components/DrinkSection";
 export { default as Footer } from "../components/Footer";
