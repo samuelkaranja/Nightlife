@@ -1,6 +1,6 @@
 import React from "react";
-import Cocktail from "../assets/glass.jpg";
-import Bar from "../assets/bar.jpg";
+import Cocktail from "../assets/Belawinski/cocktail1.jpg";
+import Seat from "../assets/Belawinski/entrance.jpeg";
 
 const Intro: React.FC = () => {
   return (
@@ -8,7 +8,8 @@ const Intro: React.FC = () => {
       <div className="w-full max-w-7xl text-center">
         {/* Title */}
         <h2 className="text-5xl sm:text-5xl md:text-6xl font-extrabold text-white">
-          Welcome to <span className="text-amber-600">Belawinski</span>
+          Welcome to{" "}
+          <span className="text-amber-600">Belawinski Cocktail Bar</span>
         </h2>
 
         {/* Subtitle */}
@@ -23,11 +24,11 @@ const Intro: React.FC = () => {
         <div className="mt-16 grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* Card 1 */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-full 'aspect-[4/3]' max-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
                 src={Cocktail}
                 alt="Crafted cocktails"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
 
@@ -43,11 +44,11 @@ const Intro: React.FC = () => {
 
           {/* Card 2 */}
           <div className="flex flex-col items-center text-center">
-            <div className="w-full h-80 rounded-2xl overflow-hidden shadow-lg">
+            <div className="w-full 'aspect-[4/3]' max-h-96 rounded-2xl overflow-hidden shadow-lg">
               <img
-                src={Bar}
+                src={Seat}
                 alt="Elegant atmosphere"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
               />
             </div>
 

@@ -1,6 +1,9 @@
 import React from "react";
 import CocktailCard from "./CocktailCard";
-import Glass from "../assets/glass.jpg";
+import Glass from "../assets/Belawinski/cocktail2.jpg";
+import Glass1 from "../assets/Belawinski/cocktail3.jpg";
+import Glass2 from "../assets/Belawinski/cocktail4.jpg";
+import Glass3 from "../assets/Belawinski/cocktail5.jpg";
 
 const Cocktails: React.FC = () => {
   const drinks = [
@@ -12,19 +15,19 @@ const Cocktails: React.FC = () => {
     },
     {
       id: 2,
-      image: Glass,
+      image: Glass1,
       title: "Midnight Sapphire",
       info: "A bold blend of whiskey, blueberry liquer, and bitters.",
     },
     {
       id: 3,
-      image: Glass,
+      image: Glass2,
       title: "Crimson Ember",
       info: "A rich and smoky concotion of mezcal and spiced cherry.",
     },
     {
       id: 4,
-      image: Glass,
+      image: Glass3,
       title: "Emerald Haze",
       info: "A crisp and herbal mixture of vodka, basil, and lime.",
     },

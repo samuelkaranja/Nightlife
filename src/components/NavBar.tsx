@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
+import Logo from "../assets/Belawinski/Logo.jpg";
 
 type NavLinkItem = {
   name: string;
@@ -22,8 +23,18 @@ const Navbar: React.FC = () => {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 lg:border-b lg:border-dotted lg:border-gray-50">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white tracking-wide">
-            Belawinski<span className="text-amber-500"> Bar</span>
+          <Link
+            to="/"
+            className="flex items-center gap-3 text-2xl font-bold text-white tracking-wide"
+          >
+            <img
+              src={Logo}
+              alt="Belawinski Bar Logo"
+              className="h-9 w-9 object-contain"
+            />
+            <span>
+              Belawinski<span className="text-amber-500"> Cocktail Bar</span>
+            </span>
           </Link>
 
           {/* Desktop Links */}

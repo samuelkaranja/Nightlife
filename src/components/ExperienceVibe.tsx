@@ -1,25 +1,28 @@
-import Cocktail from "../assets/cocktails.jpg";
+import Chess from "../assets/Belawinski/game1.jpeg";
+import Uno from "../assets/Belawinski/game5.jpeg";
+import Halloween from "../assets/Belawinski/halloween1.jpeg";
+import Halloween1 from "../assets/Belawinski/halloween3.jpeg";
 
 const images = [
   {
     id: 1,
-    src: Cocktail,
-    alt: "Guests enjoying drinks",
+    src: Chess,
+    alt: "Chess Board",
   },
   {
     id: 2,
-    src: Cocktail,
-    alt: "Bartender pouring cocktail",
+    src: Halloween,
+    alt: "Halloween Decorations",
   },
   {
     id: 3,
-    src: Cocktail,
-    alt: "Friends toasting cocktails",
+    src: Uno,
+    alt: "Uno Cards",
   },
   {
     id: 4,
-    src: Cocktail,
-    alt: "Belawinski Bar logo",
+    src: Halloween1,
+    alt: "Halloween Decorations",
   },
 ];
 
@@ -43,7 +46,7 @@ const ExperienceVibe: React.FC = () => {
           {images.map((image) => (
             <div
               key={image.id}
-              className="group relative h-64 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
+              className="group relative h-72 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300"
             >
               <img
                 src={image.src}
