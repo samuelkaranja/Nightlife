@@ -1,10 +1,10 @@
 import React from "react";
-import { Cocktails, ExperienceVibe, Hero, Intro } from "../components";
+import { Cocktails, ExperienceVibe, Intro } from "../components";
 
 const Home: React.FC = () => {
   return (
     <div>
-      <Hero />
+      {/* <Hero /> */}
       <Intro />
       <Cocktails />
       <ExperienceVibe />

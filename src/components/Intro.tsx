@@ -4,10 +4,10 @@ import Bar from "../assets/bar.jpg";
 
 const Intro: React.FC = () => {
   return (
-    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-10 lg:py-15">
+    <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 py-10 lg:py-15 mt-15">
       <div className="w-full max-w-7xl text-center">
         {/* Title */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-extrabold text-white">
           Welcome to <span className="text-amber-600">Belawinski</span>
         </h2>
 
