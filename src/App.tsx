@@ -1,11 +1,12 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Events, Gallery, Home, Menu } from "./pages";
-import { Footer, InstallBanner, NavBar } from "./components";
+import { Footer, InstallBanner, NavBar, ScrollToTop } from "./components";
 
 function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         {/* Global components */}
         <NavBar />
         <InstallBanner />

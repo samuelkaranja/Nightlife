@@ -10,4 +10,5 @@ export { default as EventsList } from "../components/EventsList";
 export { default as DrinkCard } from "../components/DrinkCard";
 export { default as DrinkSection } from "../components/DrinkSection";
 export { default as InstallBanner } from "../components/InstallBanner";
+export { default as ScrollToTop } from "../components/ScrollToTop";
 export { default as Footer } from "../components/Footer";
