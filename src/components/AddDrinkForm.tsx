@@ -33,6 +33,20 @@ const AddDrinkForm = () => {
           />
         </div>
 
+        {/* Type of Drink */}
+        <div>
+          <label className="block text-sm font-medium mb-1">
+            Type of Drink
+          </label>
+          <select className="w-full border border-emerald-500 rounded-lg p-3 text-sm focus:ring-2 focus:ring-emerald-400 outline-none">
+            <option value="">Select Type</option>
+            <option value="Gin">Gin</option>
+            <option value="Vodka">Vodka</option>
+            <option value="Whiskey">Whiskey</option>
+            <option value="Rum">Rum</option>
+          </select>
+        </div>
+
         {/* Status */}
         <div>
           <label className="block text-sm font-medium mb-1">Status</label>
