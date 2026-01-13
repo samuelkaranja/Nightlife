@@ -75,7 +75,7 @@ const Gallery: React.FC = () => {
         {/* Subtitle */}
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-white">
           A visually rich gallery showcasing the cozy chill-out atmosphere and
-          beautiful ambient lighting of Belawinski Bar.
+          beautiful ambient lighting of Belawinski Cocktail Bar.
         </p>
 
         {/* Image Grid */}

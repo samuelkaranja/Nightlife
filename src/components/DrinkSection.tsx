@@ -56,6 +56,7 @@ const DrinkSection: React.FC<DrinkSectionProps> = ({ title, drinks }) => {
             image={drink.image}
             title={drink.title}
             price={drink.price}
+            tag={drink.tag}
           />
         ))}
       </div>

@@ -38,7 +38,7 @@ const ExperienceVibe: React.FC = () => {
         {/* Subtitle */}
         <p className="mt-6 max-w-3xl mx-auto text-base sm:text-lg text-white">
           A glimpse into the vibrant nights and unforgettable moments at
-          Belawinski Bar.
+          Belawinski Cocktail Bar.
         </p>
 
         {/* Image Grid */}
