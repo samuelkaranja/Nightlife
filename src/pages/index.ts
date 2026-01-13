@@ -1,4 +1,7 @@
 export { default as Home } from "../pages/Home";
+export { default as Menu } from "../pages/Menu";
 export { default as Gallery } from "../pages/Gallery";
 export { default as Events } from "../pages/Events";
-export { default as Menu } from "../pages/Menu";
+export { default as AdminDashboard } from "./admin/AdminDashboard";
+export { default as AddDrinkPage } from "./admin/AddDrinkPage";
+export { default as AddImagePage } from "./admin/AddImagePage";

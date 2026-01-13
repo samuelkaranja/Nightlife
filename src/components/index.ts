@@ -11,4 +11,8 @@ export { default as DrinkCard } from "../components/DrinkCard";
 export { default as DrinkSection } from "../components/DrinkSection";
 export { default as InstallBanner } from "../components/InstallBanner";
 export { default as ScrollToTop } from "../components/ScrollToTop";
+export { default as Sidebar } from "../components/Sidebar";
+export { default as Header } from "../components/Header";
+export { default as AddDrinkForm } from "../components/AddDrinkForm";
+export { default as AddImageForm } from "../components/AddImageForm";
 export { default as Footer } from "../components/Footer";
