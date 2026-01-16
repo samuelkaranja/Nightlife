@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addDrink } from "../services/supabase";
+import { toast } from "react-toastify";
 
 const AddDrinkForm = () => {
   const [name, setName] = useState("");
@@ -20,13 +21,13 @@ const AddDrinkForm = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!imageFile || !name || !type || !price) {
-      return alert("Please fill all fields and upload an image.");
+      return toast.error("Please fill all fields and upload an image.");
     }
 
     setLoading(true);
     try {
       await addDrink({ name, type, price: Number(price), status, imageFile });
-      alert("Drink added successfully!");
+      toast.success("Drink added successfully!");
       setName("");
       setType("");
       setPrice("");
@@ -35,7 +36,7 @@ const AddDrinkForm = () => {
       setPreview(null);
     } catch (err) {
       console.error(err);
-      alert("Error adding drink");
+      toast.error("Error adding drink");
     } finally {
       setLoading(false);
     }

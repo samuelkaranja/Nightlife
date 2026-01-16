@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { addGalleryImage } from "../services/supabase";
+import { toast } from "react-toastify";
 
 const AddImageForm = () => {
   const [title, setTitle] = useState("");
@@ -16,18 +17,18 @@ const AddImageForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!imageFile) return alert("Please upload an image");
+    if (!imageFile) return toast.error("Please upload an image");
 
     setLoading(true);
     try {
       await addGalleryImage(imageFile, title);
-      alert("Image uploaded successfully!");
+      toast.success("Image uploaded successfully!");
       setTitle("");
       setImageFile(null);
       setPreview(null);
     } catch (err) {
       console.error(err);
-      alert("Error uploading image");
+      toast.error("Error uploading image");
     } finally {
       setLoading(false);
     }

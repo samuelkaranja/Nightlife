@@ -11,6 +11,7 @@ import {
 import { InstallBanner, ScrollToTop } from "./components";
 import MainLayout from "./layouts/MainLayout";
 import AdminLayout from "./layouts/AdminLayout";
+import { ToastContainer } from "react-toastify";
 
 function App() {
   return (
@@ -36,6 +37,18 @@ function App() {
           </Route>
         </Routes>
       </Router>
+      <ToastContainer
+        position="top-center"
+        autoClose={5000}
+        hideProgressBar={true}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="dark"
+      />
     </>
   );
 }
