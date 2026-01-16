@@ -7,3 +7,4 @@ export { default as AddDrinkPage } from "./admin/AddDrinkPage";
 export { default as AddImagePage } from "./admin/AddImagePage";
 export { default as DrinkListPage } from "./admin/DrinkListPage";
 export { default as ImageListPage } from "./admin/ImageListPage";
+export { default as EditDrink } from "./admin/EditDrink";

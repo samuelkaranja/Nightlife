@@ -1,4 +1,3 @@
-// services/supabase.ts
 import { supabase } from "../supabase/supabaseClient";
 
 // -------------------- DRINKS --------------------
@@ -56,6 +55,68 @@ export const deleteDrink = async (id: string) => {
   const { error } = await supabase.from("Drinks").delete().eq("id", id);
   if (error) throw error;
   return { success: true };
+};
+
+// Update drink
+export const updateDrink = async (
+  id: string,
+  data: {
+    name: string;
+    type: string;
+    price: number;
+    status: string;
+    imageFile?: File; // optional
+    existingImageUrl?: string;
+  }
+) => {
+  let imageUrl = data.existingImageUrl;
+
+  // If a new image is provided → upload it
+  if (data.imageFile) {
+    const fileExt = data.imageFile.name.split(".").pop();
+    const fileName = `${crypto.randomUUID()}.${fileExt}`;
+    const filePath = `public/${fileName}`;
+
+    const { error: uploadError } = await supabase.storage
+      .from("Drinks")
+      .upload(filePath, data.imageFile);
+
+    if (uploadError) throw uploadError;
+
+    const { data: imageData } = supabase.storage
+      .from("Drinks")
+      .getPublicUrl(filePath);
+
+    imageUrl = imageData.publicUrl;
+  }
+
+  // Update record
+  const { error } = await supabase
+    .from("Drinks")
+    .update({
+      name: data.name,
+      type: data.type,
+      price: data.price,
+      status: data.status,
+      image_url: imageUrl,
+    })
+    .eq("id", id);
+
+  if (error) throw error;
+
+  return { success: true };
+};
+
+// Fetch single drink by ID
+export const fetchDrinkById = async (id: string) => {
+  const { data, error } = await supabase
+    .from("Drinks")
+    .select("*")
+    .eq("id", id)
+    .single();
+
+  if (error) throw error;
+  return data;
 };
 
 // -------------------- GALLERY IMAGES --------------------

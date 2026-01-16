@@ -4,6 +4,7 @@ import {
   AddImagePage,
   AdminDashboard,
   DrinkListPage,
+  EditDrink,
   Events,
   Gallery,
   Home,
@@ -38,6 +39,7 @@ function App() {
             <Route path="/admin/gallery/new" element={<AddImagePage />} />
             <Route path="/admin/drinklist" element={<DrinkListPage />} />
             <Route path="/admin/imagelist" element={<ImageListPage />} />
+            <Route path="/admin/drinks/edit/:id" element={<EditDrink />} />
           </Route>
         </Routes>
       </Router>

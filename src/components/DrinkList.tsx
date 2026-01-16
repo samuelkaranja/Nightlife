@@ -1,8 +1,11 @@
 import { useEffect, useState } from "react";
 import { deleteDrink, fetchDrinks } from "../services/supabase";
+import { useNavigate } from "react-router-dom";
 
 const DrinkList = () => {
   const [drinks, setDrinks] = useState<any[]>([]);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadData = async () => {
@@ -50,14 +53,29 @@ const DrinkList = () => {
                 <p className="text-sm text-neutral-600">
                   Status: {drink.status}
                 </p>
-
-                <button
-                  onClick={() => handleDeleteDrink(drink.id)}
-                  className="mt-3 bg-red-500 hover:bg-red-600 text-white
+                <div className="flex justify-between items-center">
+                  <button
+                    onClick={() => {
+                      if (
+                        confirm("Are you sure you want to delete this drink?")
+                      ) {
+                        handleDeleteDrink(drink.id);
+                      }
+                    }}
+                    className="mt-3 bg-red-500 hover:bg-red-600 hover:cursor-pointer text-white
                                rounded-lg px-3 py-1 text-sm transition"
-                >
-                  Delete
-                </button>
+                  >
+                    Delete
+                  </button>
+
+                  <button
+                    onClick={() => navigate(`/admin/drinks/edit/${drink.id}`)}
+                    className="mt-3 bg-blue-500 hover:bg-blue-600 hover:cursor-pointer text-white
+             rounded-lg px-3 py-1 text-sm transition"
+                  >
+                    Edit
+                  </button>
+                </div>
               </div>
             </div>
           ))}
