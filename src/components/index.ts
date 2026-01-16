@@ -15,4 +15,6 @@ export { default as Sidebar } from "../components/Sidebar";
 export { default as Header } from "../components/Header";
 export { default as AddDrinkForm } from "../components/AddDrinkForm";
 export { default as AddImageForm } from "../components/AddImageForm";
+export { default as DrinkList } from "../components/DrinkList";
+export { default as ImageList } from "../components/ImageList";
 export { default as Footer } from "../components/Footer";

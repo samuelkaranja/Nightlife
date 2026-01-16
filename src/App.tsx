@@ -3,9 +3,11 @@ import {
   AddDrinkPage,
   AddImagePage,
   AdminDashboard,
+  DrinkListPage,
   Events,
   Gallery,
   Home,
+  ImageListPage,
   Menu,
 } from "./pages";
 import { InstallBanner, ScrollToTop } from "./components";
@@ -34,6 +36,8 @@ function App() {
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="/admin/drinks/new" element={<AddDrinkPage />} />
             <Route path="/admin/gallery/new" element={<AddImagePage />} />
+            <Route path="/admin/drinklist" element={<DrinkListPage />} />
+            <Route path="/admin/imagelist" element={<ImageListPage />} />
           </Route>
         </Routes>
       </Router>

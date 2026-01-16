@@ -74,6 +74,32 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
         >
           Add Gallery Image
         </NavLink>
+
+        <div className="border-b border-gray-200 border-dotted my-5"></div>
+
+        <NavLink
+          to="/admin/drinklist"
+          onClick={onClose}
+          className={({ isActive }) =>
+            `block rounded-lg px-3 py-2 transition ${
+              isActive ? "bg-emerald-500 text-white" : "hover:bg-neutral-800"
+            }`
+          }
+        >
+          Drinks List
+        </NavLink>
+
+        <NavLink
+          to="/admin/imagelist"
+          onClick={onClose}
+          className={({ isActive }) =>
+            `block rounded-lg px-3 py-2 transition ${
+              isActive ? "bg-emerald-500 text-white" : "hover:bg-neutral-800"
+            }`
+          }
+        >
+          Gallery Images List
+        </NavLink>
       </nav>
     </aside>
   );
