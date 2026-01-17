@@ -14,6 +14,7 @@ const navLinks: NavLinkItem[] = [
   { name: "Menu", href: "/menu", type: "route" },
   { name: "Gallery", href: "/gallery", type: "route" },
   { name: "Events", href: "/events", type: "route" },
+  { name: "Login", href: "/admin/login", type: "route" },
 ];
 
 const Navbar: React.FC = () => {
@@ -55,7 +56,7 @@ const Navbar: React.FC = () => {
                 >
                   {link.name}
                 </a>
-              )
+              ),
             )}
           </div>
 
@@ -96,7 +97,7 @@ const Navbar: React.FC = () => {
               >
                 {link.name}
               </a>
-            )
+            ),
           )}
         </div>
       </div>

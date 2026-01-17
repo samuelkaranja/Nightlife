@@ -123,6 +123,8 @@ const EditDrink = () => {
             <option value="Vodka">Vodka</option>
             <option value="Whiskey">Whiskey</option>
             <option value="Rum">Rum</option>
+            <option value="Tequila">Tequila</option>
+            <option value="Brandy">Brandy</option>
           </select>
         </div>
 
