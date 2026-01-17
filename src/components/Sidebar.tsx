@@ -11,7 +11,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
     <aside
       className={`
         fixed lg:static z-50
-    w-64 bg-black text-white
+    w-64 bg-[#101622] text-white
     flex flex-col p-6
     transform transition-transform duration-300
     ${isOpen ? "translate-x-0" : "-translate-x-full"}

@@ -41,7 +41,7 @@ const DrinkList = () => {
               <img
                 src={drink.image_url}
                 alt={drink.name}
-                className="w-full h-30 object-cover"
+                className="w-full h-44 object-contain"
               />
 
               <div className="p-4 space-y-1">

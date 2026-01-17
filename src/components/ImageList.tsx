@@ -37,14 +37,16 @@ const ImageList = () => {
               key={g.id}
               className="bg-white rounded-2xl shadow-sm overflow-hidden"
             >
-              <img
-                src={g.image_url}
-                alt={g.title || "Gallery Image"}
-                className="w-full h-40 object-cover"
-              />
+              <div className="h-48 overflow-hidden">
+                <img
+                  src={g.image_url}
+                  alt={g.title || "Gallery Image"}
+                  className="w-full h-full object-cover"
+                />
+              </div>
 
               <div className="p-4">
-                <p className="font-medium text-sm">{g.title || "No Title"}</p>
+                <p className="font-medium text-lg">{g.title || "No Title"}</p>
 
                 <button
                   onClick={() => handleDeleteGallery(g.id)}

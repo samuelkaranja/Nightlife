@@ -41,6 +41,7 @@ function App() {
             <Route path="/admin/imagelist" element={<ImageListPage />} />
             <Route path="/admin/drinks/edit/:id" element={<EditDrink />} />
           </Route>
+          <Route path="*" element={<Home />} />
         </Routes>
       </Router>
       <ToastContainer

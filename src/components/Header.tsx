@@ -6,7 +6,7 @@ type HeaderProps = {
 
 const Header = ({ onMenuClick }: HeaderProps) => {
   return (
-    <header className="h-16 bg-white flex items-center px-4 sm:px-6">
+    <header className="h-16 bg-[#101622] flex items-center px-4 sm:px-6">
       <button className="lg:hidden mr-4" onClick={onMenuClick}>
         <Menu size={22} color="green" />
       </button>
