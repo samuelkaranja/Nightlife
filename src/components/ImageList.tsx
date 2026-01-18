@@ -22,9 +22,7 @@ const ImageList = () => {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-semibold mb-8">
-        Gallery Images ({gallery.length})
-      </h2>
+      <h2 className="text-3xl font-semibold mb-8">Gallery Images</h2>
 
       {gallery.length === 0 ? (
         <p className="text-neutral-500 text-sm">

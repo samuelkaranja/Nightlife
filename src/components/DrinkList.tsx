@@ -25,9 +25,7 @@ const DrinkList = () => {
 
   return (
     <section className="space-y-4">
-      <h2 className="text-3xl font-semibold mb-8">
-        All Drinks ({drinks.length})
-      </h2>
+      <h2 className="text-3xl font-semibold mb-8">All Drinks</h2>
 
       {drinks.length === 0 ? (
         <p className="text-neutral-500 text-sm">No drinks added yet.</p>
