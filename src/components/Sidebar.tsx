@@ -40,7 +40,7 @@ const Sidebar = ({ isOpen, onClose }: SidebarProps) => {
 
       <nav className="space-y-3 text-sm">
         <NavLink
-          to="/admin"
+          to="/admin/dashboard"
           onClick={onClose}
           className={({ isActive }) =>
             `block rounded-lg px-3 py-2 transition ${
