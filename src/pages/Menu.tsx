@@ -1,7 +1,66 @@
-import { DrinkSection } from "../components";
-import { ginDrinks, vodkaDrinks } from "../data";
+import { useEffect, useMemo, useState } from "react";
+import DrinkSection from "../components/DrinkSection";
+import { fetchDrinks } from "../services/supabase";
+import { type DbDrink } from "../types/dbDrink";
+import { type Drink } from "../types/uiDrink";
+import { mapDbDrinkToUiDrink } from "../utils/mapDrink";
 
 const Menu: React.FC = () => {
+  const [dbDrinks, setDbDrinks] = useState<DbDrink[]>([]);
+
+  useEffect(() => {
+    const loadData = async () => {
+      const data = await fetchDrinks();
+      setDbDrinks(data);
+    };
+
+    loadData();
+  }, []);
+
+  const ginDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks.filter((drink) => drink.type === "Gin").map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
+  const vodkaDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks
+        .filter((drink) => drink.type === "Vodka")
+        .map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
+  const whiskeyDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks
+        .filter((drink) => drink.type === "Whiskey")
+        .map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
+  const rumDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks.filter((drink) => drink.type === "Rum").map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
+  const brandyDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks
+        .filter((drink) => drink.type === "Brandy")
+        .map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
+  const tequilaDrinks: Drink[] = useMemo(
+    () =>
+      dbDrinks
+        .filter((drink) => drink.type === "Tequila")
+        .map(mapDbDrinkToUiDrink),
+    [dbDrinks],
+  );
+
   return (
     <section className="w-full flex justify-center px-4 sm:px-6 lg:px-8 mt-5">
       <div className="w-full max-w-7xl">
@@ -19,8 +78,11 @@ const Menu: React.FC = () => {
 
         {/* Drink Sections */}
         <DrinkSection title="Gin Selections" drinks={ginDrinks} />
-
         <DrinkSection title="Vodka Selections" drinks={vodkaDrinks} />
+        <DrinkSection title="Whiskey Selections" drinks={whiskeyDrinks} />
+        <DrinkSection title="Rum Selections" drinks={rumDrinks} />
+        <DrinkSection title="Brandy Selections" drinks={brandyDrinks} />
+        <DrinkSection title="Tequila Selections" drinks={tequilaDrinks} />
       </div>
     </section>
   );

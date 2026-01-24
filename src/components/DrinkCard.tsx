@@ -22,7 +22,7 @@ const DrinkCard: React.FC<DrinkCardProps> = ({
   return (
     <div className="min-w-[240px] overflow-hidden transition">
       {/* Image section */}
-      <div className="relative h-80 rounded-2xl overflow-hidden">
+      <div className="relative h-60 rounded-2xl overflow-hidden">
         <img
           src={image}
           alt={title}
@@ -42,7 +42,7 @@ const DrinkCard: React.FC<DrinkCardProps> = ({
       {/* Text content */}
       <div className="p-4">
         <h3 className="text-xl font-bold text-white">{title}</h3>
-        <p className="mt-2 text-white font-semibold">{price}</p>
+        <p className="mt-2 text-white font-semibold">Kshs {price}</p>
       </div>
     </div>
   );

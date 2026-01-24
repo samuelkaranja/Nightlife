@@ -1,5 +1,5 @@
 import { supabase } from "../supabase/supabaseClient";
-
+import { type DbDrink } from "../types/dbDrink";
 // -------------------- DRINKS --------------------
 
 // Add new drink
@@ -40,14 +40,15 @@ export const addDrink = async (data: {
 };
 
 // Fetch all drinks
-export const fetchDrinks = async () => {
-  const { data, error } = await supabase
-    .from("Drinks")
-    .select("*")
-    .order("created_at", { ascending: false });
+export const fetchDrinks = async (): Promise<DbDrink[]> => {
+  const { data, error } = await supabase.from("Drinks").select("*");
 
-  if (error) throw error;
-  return data;
+  if (error) {
+    console.error(error);
+    return [];
+  }
+
+  return data as DbDrink[];
 };
 
 // Delete a drink by id
@@ -67,7 +68,7 @@ export const updateDrink = async (
     status: string;
     imageFile?: File; // optional
     existingImageUrl?: string;
-  }
+  },
 ) => {
   let imageUrl = data.existingImageUrl;
 
